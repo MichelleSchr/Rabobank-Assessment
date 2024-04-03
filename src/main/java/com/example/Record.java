@@ -25,6 +25,10 @@ public class Record {
     @CsvBindByName(column = "End Balance")
     private double endBalance;
 
+    public Record() {
+        // Default no-argument constructor, needed for openCSV mapping
+    }
+
     public Record(int reference, String accountNumber, String description, double startBalance, String mutation,
             double endBalance) {
         this.reference = reference;
